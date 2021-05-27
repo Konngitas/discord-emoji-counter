@@ -16,7 +16,7 @@ which may take an incredibly long time.
 `python3 emotecounter.py Totally.Real.Bot.Token 123123123123 5000`
 
 ### Output
-The script will print a list of server emotes and how many times they have been used(including reactions), like so:
+The script will print a list of server emotes and how many times they have been used(including reactions), in descending order of use like so:
 ```
 <:emoji1:123123123123> : 352
 <:emoji2:234234234234> : 40
