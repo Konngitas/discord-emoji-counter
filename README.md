@@ -7,7 +7,7 @@ This python script will tally the usage of a guild's custom emoji within that gu
 
 ## Usage
 This script takes 3 whitespace-separated arguments, in this order. 
-1. **Bot Token**: A discord bot token
+1. **Bot Token**: A discord bot token. The bot user must be added to the discord guild you wish to tally the emoji for
 2. **Guild ID**: The ID of the Discord Guild you wish to tally the emoji usage for
 3. *Message fetch limit*: A limit for how many messages to fetch per channel. This argument is **optional**. If not provided, the script will fetch **ALL** messages in a channel,
 which may take an incredibly long time.
