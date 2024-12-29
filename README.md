@@ -2,7 +2,7 @@
 This python script will tally the usage of a guild's custom emoji within that guild using discord.py
 
 ## Requirements
-- Python 3.7+ (you can probably use a lower version as long as its Python 3, but I have not tested this)
+- Python 3.7+
 - [discord.py](https://discordpy.readthedocs.io/en/stable/)
 
 ## Usage
