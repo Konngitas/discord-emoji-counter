@@ -1,5 +1,6 @@
 # discord-emoji-counter
-This python script will tally the usage of a guild's custom emoji within that guild using discord.py
+This python script will tally the usage of a guild's custom emoji within that guild using discord.py.
+It goes through all channels and threads it has access to and counts how many times each of the guild's emojis and stickers were used.
 
 ## Requirements
 - Python 3.7+
@@ -16,10 +17,16 @@ which may take an incredibly long time.
 `python3 emotecounter.py Totally.Real.Bot.Token 123123123123 5000`
 
 ### Output
-The script will print a list of server emotes and how many times they have been used(including reactions), in descending order of use like so:
+The script will print a list of server emoji and stickers, as well ashow many times they have been used(including reactions), in descending order of usage count like so:
 ```
-<:emoji1:123123123123> : 352
-<:emoji2:234234234234> : 40
-<:emoji3:345345345345> : 5
-<:emojinooneuses:456456456456> : 0
+========= EMOJI COUNTS =========
+Emoji Name 1: 63
+Emoji Name 2: 23
+Emoji Name 3: 5
+Emoji Name 4: 0
+========= STICKER COUNTS =========
+Sticker Name 1: 10
+Sticker Name 2: 4
+Sticker Name 3: 2
+Sticker Name 4: 0
 ```

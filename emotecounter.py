@@ -63,11 +63,11 @@ async def on_ready():
 
         print("========= EMOJI COUNTS =========")
         for emoji, count in sorted(emoji_count.items(), key=lambda item: item[1], reverse=True):
-            print(f"{emojis[emoji].name} : {count}")
+            print(f"{emojis[emoji].name}: {count}")
 
         print("========= STICKER COUNTS =========")
         for sticker_id, count in sorted(sticker_count.items(), key=lambda item: item[1], reverse=True):
-            print(f"{stickers[sticker_id].name} : {count}")
+            print(f"{stickers[sticker_id].name}: {count}")
         print
 
     else:
@@ -82,18 +82,18 @@ async def fetch_messages(channel_or_thread: Union[TextChannel, Thread], emoji_co
             for reaction in message.reactions:
                 emoji_str = str(reaction.emoji)
                 if emoji_str in emoji_count:
-                    print(f"DEBUG: Reaction found: {emoji_str}")
+                    #print(f"DEBUG: Reaction found: {emoji_str}")
                     emoji_count[emoji_str] += reaction.count
 
             message_emojis = re.findall("<:\w+:\d+>", message.content)
             for emoji in message_emojis:
                 if emoji in emoji_count:
-                    print(f"DEBUG: Emoji found {emoji}")
+                    #print(f"DEBUG: Emoji found {emoji}")
                     emoji_count[emoji] += 1
 
             for sticker in message.stickers:
                 if sticker.id in sticker_count:
-                    print(f"DEBUG: Sticker found: {sticker}")
+                    #print(f"DEBUG: Sticker found: {sticker}")
                     sticker_count[sticker.id] += 1
     except Forbidden:
         print(f"Bot does not have access to fetch message history for channel {channel_or_thread.name}. Skipping.") 
